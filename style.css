@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color:hsl(233, 47%, 7%);
+    font-size:  15px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+}
+.Card
+{
+margin:0 auto;
+max-width: 1020px;
+}
+.details
+{
+    background-color: hsl(244, 38%, 16%);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+overflow: hidden;
+margin: 2rem;
+}
+.header
+{
+    padding: 13%;
+}
+.title
+{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding-bottom: 22px;
+}
+span
+{
+    color:hsl(277,64%,61%) ;
+}
+.subtitle
+{
+    color:hsla(0, 0%, 100%, 0.75) ;
+    font-size: medium;
+    line-height: 1.8;
+}
+.photo img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-flex;
+    justify-content: end;
+}
+.photo
+{
+    position: relative;
+    display: inline-flex;
+}
+.photo::after
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277,64%,61%,0.6); 
+}
+.stat-box
+{
+    display:flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+.stat-box p
+{
+    color:hsl(0, 0%, 100%,0.6) ;
+    font-weight: bold;
+}
+.stat-box p.main 
+{
+color: hsl(0, 0%, 100%); 
+font-size: 25px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+/*Responsive*/
+@media screen and(max-width:800px)and(min-width:376px)
+    {
+    body
+    {
+        font-size: 12px; 
+    }
+    .header
+    {
+        padding: 12%;
+    }
+    .title
+    {
+        font-size: 22px;
+    }
+    .stat-box
+    {
+        padding-top: 30px;
+    }
+    .stat-box p .main
+    {
+        font-size: 17px;
+    }
+    }
+    @media screen and(max-width:375px)
+        {
+        body 
+        {
+        text-align: center;
+        }
+        .details
+        {
+        grid-template-columns: 1fr;
+        }
+        .photo
+        {
+        order: -1;
+        }
+        .main
+        {
+        padding: 12% 8%;
+        }
+        .title
+        {
+        font-size: 23px;
+        line-height: 1.4;
+        }
+        .stat-box
+        {
+        flex-direction: column;
+        padding-top: 30px;
+        }
+        .stat-box div 
+        {
+        margin-top: 20px;
+        }
+        }
